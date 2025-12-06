@@ -1,7 +1,6 @@
 
-  # Prototipo Aplicação Tons de Cinza
-
-  This is a code bundle for Prototipo Aplicação Tons de Cinza. The original project is available at https://www.figma.com/design/N0Ms6vvLwWDXENvTke2b8Y/Prototipo-Aplica%C3%A7%C3%A3o-Tons-de-Cinza.
+  # Aplicação Gestão Financeira
+  Esse é o nosso projeto que visa a melhor organização e controle financeiro da população mundial. 
 
   ## Running the code
 
