@@ -1,0 +1,21 @@
+var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddControllersWithViews();
+
+var app = builder.Build();
+
+app.UseStaticFiles();
+app.UseRouting();
+
+app.MapControllerRoute(
+    name: "default",
+    pattern: "{controller=Account}/{action=Login}/{id?}"
+);
+
+app.MapControllerRoute(
+    name: "accountPost",
+    pattern: "Account/Login",
+    defaults: new { controller = "Account", action = "LoginPost" }
+);
+
+app.Run();
