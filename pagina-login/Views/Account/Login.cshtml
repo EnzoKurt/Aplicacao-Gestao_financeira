@@ -1,0 +1,62 @@
+@{
+    ViewData["Title"] = "Login";
+}
+
+<link rel="stylesheet" href="~/css/auth.css" />
+
+<div class="auth-container">
+
+    <div class="auth-header">
+        <button type="button" id="btnLogin" class="auth-tab active">Login</button>
+        <button type="button" id="btnRegistro" class="auth-tab">Registro</button>
+    </div>
+
+    <form id="authForm">
+
+        <div id="campoNome" class="input-group hidden">
+            <label>Nome completo</label>
+            <input type="text" placeholder="Seu nome completo">
+        </div>
+
+        <div class="input-group">
+            <label>Email</label>
+            <input type="email" placeholder="seu@email.com">
+        </div>
+
+        <div class="input-group">
+            <label>Senha</label>
+            <input type="password" placeholder="********">
+        </div>
+
+        <button type="submit" id="btnSubmit" class="submit-btn">
+            Entrar
+        </button>
+
+    </form>
+
+</div>
+
+<script>
+    const btnLogin = document.getElementById("btnLogin");
+    const btnRegistro = document.getElementById("btnRegistro");
+    const campoNome = document.getElementById("campoNome");
+    const btnSubmit = document.getElementById("btnSubmit");
+
+    btnRegistro.addEventListener("click", () => {
+        campoNome.classList.remove("hidden");
+
+        btnRegistro.classList.add("active");
+        btnLogin.classList.remove("active");
+
+        btnSubmit.innerText = "Registrar";
+    });
+
+    btnLogin.addEventListener("click", () => {
+        campoNome.classList.add("hidden");
+
+        btnLogin.classList.add("active");
+        btnRegistro.classList.remove("active");
+
+        btnSubmit.innerText = "Entrar";
+    });
+</script>
