@@ -1,0 +1,29 @@
+<link rel="stylesheet" href="~/css/auth.css" />
+
+<div class="auth-container">
+
+    <div class="auth-header">
+        <a asp-controller="Account" asp-action="Login">Login</a>
+        <a class="active" asp-controller="Account" asp-action="Register">Registro</a>
+    </div>
+
+    <form method="post">
+        <div class="form-group">
+            <label>Nome Completo</label>
+            <input type="text" required />
+        </div>
+
+        <div class="form-group">
+            <label>Email</label>
+            <input type="email" required />
+        </div>
+
+        <div class="form-group">
+            <label>Senha</label>
+            <input type="password" required />
+        </div>
+
+        <button type="submit">Criar Conta</button>
+    </form>
+
+</div>
