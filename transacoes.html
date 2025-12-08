@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transações - Finanças</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-links">
+            <a href="index.html"><i class="ph ph-squares-four"></i> Dashboard</a>
+            <a href="transacoes.html" class="active"><i class="ph ph-list-dashes"></i> Transações</a>
+            <a href="relatorios.html"><i class="ph ph-chart-bar"></i> Relatórios</a>
+            <a href="metas.html"><i class="ph ph-target"></i> Metas</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="page-header">
+            <div>
+                <h2>Gerenciar Transações</h2>
+                <p class="subtitle">Adicione e gerencie suas receitas e despesas</p>
+            </div>
+            <button class="btn-primary">
+                <i class="ph ph-plus"></i> Nova Transação
+            </button>
+        </div>
+
+        <section class="content-box">
+            <div class="filters-area">
+                <div class="filter-group search-group">
+                    <label>Buscar</label>
+                    <div class="input-icon">
+                        <i class="ph ph-magnifying-glass"></i>
+                        <input type="text" placeholder="Buscar transação...">
+                    </div>
+                </div>
+                <div class="filter-group">
+                    <label>Filtrar por Tipo</label>
+                    <select><option>Todas</option><option>Receitas</option><option>Despesas</option></select>
+                </div>
+                <div class="filter-group">
+                    <label>Filtrar por Categoria</label>
+                    <select><option>Todas</option><option>Salário</option><option>Moradia</option></select>
+                </div>
+            </div>
+
+            <div class="table-responsive">
+                <table class="transaction-table">
+                    <thead>
+                        <tr>
+                            <th>Data</th><th>Descrição</th><th>Categoria</th><th>Tipo</th><th>Valor</th><th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>30/11/2025</td><td>Salário</td><td>Salário</td>
+                            <td><span class="badge badge-income"><i class="ph ph-trend-up"></i> Receita</span></td>
+                            <td>R$ 5.800,00</td>
+                            <td class="actions"><i class="ph ph-pencil-simple"></i><i class="ph ph-trash"></i></td>
+                        </tr>
+                        <tr>
+                            <td>04/12/2025</td><td>Aluguel</td><td>Moradia</td>
+                            <td><span class="badge badge-expense"><i class="ph ph-trend-down"></i> Despesa</span></td>
+                            <td>R$ 1.500,00</td>
+                            <td class="actions"><i class="ph ph-pencil-simple"></i><i class="ph ph-trash"></i></td>
+                        </tr>
+                        <tr>
+                            <td>04/12/2025</td><td>Supermercado</td><td>Alimentação</td>
+                            <td><span class="badge badge-expense"><i class="ph ph-trend-down"></i> Despesa</span></td>
+                            <td>R$ 450,00</td>
+                            <td class="actions"><i class="ph ph-pencil-simple"></i><i class="ph ph-trash"></i></td>
+                        </tr>
+                        <tr>
+                            <td>02/12/2025</td><td>Freelance</td><td>Trabalho Extra</td>
+                            <td><span class="badge badge-income"><i class="ph ph-trend-up"></i> Receita</span></td>
+                            <td>R$ 800,00</td>
+                            <td class="actions"><i class="ph ph-pencil-simple"></i><i class="ph ph-trash"></i></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

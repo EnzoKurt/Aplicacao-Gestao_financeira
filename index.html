@@ -1,15 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Finanças</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
 
-  <!DOCTYPE html>
-  <html lang="en">
-    <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Prototipo Aplicação Tons de Cinza</title>
-    </head>
+    <nav class="navbar">
+        <div class="nav-links">
+            <a href="index.html" class="active"><i class="ph ph-squares-four"></i> Dashboard</a>
+            <a href="transacoes.html"><i class="ph ph-list-dashes"></i> Transações</a>
+            <a href="relatorios.html"><i class="ph ph-chart-bar"></i> Relatórios</a>
+            <a href="#"><i class="ph ph-target"></i> Metas</a>
+        </div>
+    </nav>
 
-    <body>
-      <div id="root"></div>
-      <script type="module" src="/src/main.tsx"></script>
-    </body>
-  </html>
-  
+    <main class="container">
+        <section class="summary-cards">
+            <div class="card">
+                <div class="card-info">
+                    <span>Receitas do Mês</span>
+                    <h3>R$ 6.600,00</h3>
+                </div>
+                <div class="icon-box"><i class="ph ph-trend-up"></i></div>
+            </div>
+            <div class="card">
+                <div class="card-info">
+                    <span>Despesas do Mês</span>
+                    <h3>R$ 4.200,00</h3>
+                </div>
+                <div class="icon-box"><i class="ph ph-trend-down"></i></div>
+            </div>
+            <div class="card dark">
+                <div class="card-info">
+                    <span>Saldo do Mês</span>
+                    <h3>R$ 2.400,00</h3>
+                </div>
+                <div class="icon-box"><i class="ph ph-currency-dollar"></i></div>
+            </div>
+        </section>
+
+        <section class="chart-section">
+            <h2>Receitas vs Despesas (Últimos 6 Meses)</h2>
+            <div class="chart-container">
+                <canvas id="financeChart"></canvas>
+            </div>
+        </section>
+
+        <section class="transactions-section">
+            <h2>Transações Recentes</h2>
+            <div class="transaction-list">
+                <div class="transaction-item">
+                    <div class="t-left">
+                        <div class="t-icon income"><i class="ph ph-trend-up"></i></div>
+                        <div>
+                            <h4>Salário</h4>
+                            <p>Salário - 01/12/2025</p>
+                        </div>
+                    </div>
+                    <span class="income-text">+ R$ 5.000,00</span>
+                </div>
+                <div class="transaction-item">
+                    <div class="t-left">
+                        <div class="t-icon expense"><i class="ph ph-trend-down"></i></div>
+                        <div>
+                            <h4>Aluguel</h4>
+                            <p>Moradia - 05/12/2025</p>
+                        </div>
+                    </div>
+                    <span class="expense-text">- R$ 1.500,00</span>
+                </div>
+                <div class="transaction-item">
+                    <div class="t-left">
+                        <div class="t-icon expense"><i class="ph ph-shopping-cart"></i></div>
+                        <div>
+                            <h4>Supermercado</h4>
+                            <p>Alimentação - 05/12/2025</p>
+                        </div>
+                    </div>
+                    <span class="expense-text">- R$ 450,00</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

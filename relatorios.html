@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatórios - Finanças</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-links">
+            <a href="index.html"><i class="ph ph-squares-four"></i> Dashboard</a>
+            <a href="transacoes.html"><i class="ph ph-list-dashes"></i> Transações</a>
+            <a href="relatorios.html" class="active"><i class="ph ph-chart-bar"></i> Relatórios</a>
+            <a href="metas.html"><i class="ph ph-target"></i> Metas</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="page-header">
+            <div>
+                <h2>Relatórios Financeiros</h2>
+                <p class="subtitle">Visualize e analise seus dados financeiros</p>
+            </div>
+            <div class="header-actions">
+                <button class="btn-outline"><i class="ph ph-arrows-clockwise"></i> Gerar Relatório</button>
+                <button class="btn-primary"><i class="ph ph-download-simple"></i> Exportar PDF</button>
+            </div>
+        </div>
+
+        <div class="date-filter-box">
+            <i class="ph ph-calendar-blank"></i> <span>Selecionar Período:</span>
+            <select><option>Dezembro 2025</option><option>Novembro 2025</option></select>
+        </div>
+
+        <section class="kpi-grid">
+            <div class="card"><div class="card-content"><span>Total de Receitas</span><h3>R$ 6.920,00</h3><p class="trend positive">+12% vs mês anterior</p></div></div>
+            <div class="card"><div class="card-content"><span>Total de Despesas</span><h3>R$ 4.200,00</h3><p class="trend negative">-5% vs mês anterior</p></div></div>
+            <div class="card"><div class="card-content"><span>Saldo Líquido</span><h3>R$ 2.720,00</h3><p class="trend positive">+28% vs mês anterior</p></div></div>
+            <div class="card kpi-dark"><div class="card-content"><span>Taxa de Poupança</span><h3>39,3%</h3><p class="meta-text">Meta: 30%</p></div></div>
+        </section>
+
+        <section class="charts-grid">
+            <div class="chart-box">
+                <h3>Despesas por Categoria</h3>
+                <div class="chart-wrapper-pie"><canvas id="categoryChart"></canvas></div>
+                <div class="custom-legend">
+                    <div class="legend-item"><span class="dot color-1"></span> Moradia: R$ 1.500,00</div>
+                    <div class="legend-item"><span class="dot color-2"></span> Alimentação: R$ 730,00</div>
+                    <div class="legend-item"><span class="dot color-3"></span> Transporte: R$ 400,00</div>
+                    <div class="legend-item"><span class="dot color-4"></span> Saúde: R$ 150,00</div>
+                    <div class="legend-item"><span class="dot color-5"></span> Utilidades: R$ 120,00</div>
+                    <div class="legend-item"><span class="dot color-6"></span> Lazer: R$ 300,00</div>
+                </div>
+            </div>
+            <div class="chart-box">
+                <h3>Evolução Mensal de Saldo</h3>
+                <div class="chart-wrapper-bar"><canvas id="evolutionChart"></canvas></div>
+            </div>
+        </section>
+
+        <section class="analysis-section">
+            <h3>Análise Detalhada</h3>
+            <div class="analysis-list">
+                <div class="analysis-item">
+                    <div class="a-info"><span class="a-label">Categoria com maior gasto</span><span class="a-value">Moradia - Aluguel</span></div><span class="a-amount">R$ 1.500,00</span>
+                </div>
+                <div class="analysis-item">
+                    <div class="a-info"><span class="a-label">Maior receita do mês</span><span class="a-value">Salário</span></div><span class="a-amount">R$ 5.800,00</span>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metas - Finanças</title>
+    <link rel="stylesheet" href="metas.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-links">
+            <a href="index.html"><i class="ph ph-squares-four"></i> Dashboard</a>
+            <a href="transacoes.html"><i class="ph ph-list-dashes"></i> Transações</a>
+            <a href="relatorios.html"><i class="ph ph-chart-bar"></i> Relatórios</a>
+            <a href="metas.html" class="active"><i class="ph ph-target"></i> Metas</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        
+        <div class="page-header">
+            <div>
+                <h2>Metas Financeiras</h2>
+                <p class="subtitle">Defina e acompanhe suas metas de economia</p>
+            </div>
+            <button class="btn-primary">
+                <i class="ph ph-plus"></i> Nova Meta
+            </button>
+        </div>
+
+        <section class="goals-grid">
+            
+            <div class="goal-card">
+                <div class="goal-header">
+                    <div class="goal-icon"><i class="ph ph-shield-check"></i></div>
+                    <div class="goal-title">
+                        <h4>Fundo de Emergência</h4>
+                        <span>Poupança</span>
+                    </div>
+                    <button class="btn-icon"><i class="ph ph-pencil-simple"></i></button>
+                </div>
+
+                <div class="progress-section">
+                    <div class="progress-labels">
+                        <span>Progresso</span>
+                        <span>62.5%</span>
+                    </div>
+                    <div class="progress-track">
+                        <div class="progress-fill" style="width: 62.5%;"></div>
+                    </div>
+                </div>
+
+                <div class="goal-values">
+                    <div class="val-row"><span>Valor Atual</span> <strong>R$ 12.500,00</strong></div>
+                    <div class="val-row"><span>Valor Alvo</span> <strong>R$ 20.000,00</strong></div>
+                    <div class="val-row highlight"><span>Faltam</span> <strong>R$ 7.500,00</strong></div>
+                </div>
+
+                <div class="goal-footer">
+                    <span><i class="ph ph-calendar"></i> 25 dias restantes</span>
+                    <button class="btn-small">Atualizar</button>
+                </div>
+            </div>
+
+            <div class="goal-card">
+                <div class="goal-header">
+                    <div class="goal-icon"><i class="ph ph-airplane-tilt"></i></div>
+                    <div class="goal-title">
+                        <h4>Viagem de Férias</h4>
+                        <span>Lazer</span>
+                    </div>
+                    <button class="btn-icon"><i class="ph ph-pencil-simple"></i></button>
+                </div>
+
+                <div class="progress-section">
+                    <div class="progress-labels">
+                        <span>Progresso</span>
+                        <span>40.0%</span>
+                    </div>
+                    <div class="progress-track">
+                        <div class="progress-fill" style="width: 40%;"></div>
+                    </div>
+                </div>
+
+                <div class="goal-values">
+                    <div class="val-row"><span>Valor Atual</span> <strong>R$ 3.200,00</strong></div>
+                    <div class="val-row"><span>Valor Alvo</span> <strong>R$ 8.000,00</strong></div>
+                    <div class="val-row highlight"><span>Faltam</span> <strong>R$ 4.800,00</strong></div>
+                </div>
+
+                <div class="goal-footer">
+                    <span><i class="ph ph-calendar"></i> 9 dias restantes</span>
+                    <button class="btn-small">Atualizar</button>
+                </div>
+            </div>
+
+            <div class="goal-card">
+                <div class="goal-header">
+                    <div class="goal-icon"><i class="ph ph-graduation-cap"></i></div>
+                    <div class="goal-title">
+                        <h4>Curso de Especialização</h4>
+                        <span>Educação</span>
+                    </div>
+                    <button class="btn-icon"><i class="ph ph-pencil-simple"></i></button>
+                </div>
+
+                <div class="progress-section">
+                    <div class="progress-labels">
+                        <span>Progresso</span>
+                        <span>82.0%</span>
+                    </div>
+                    <div class="progress-track">
+                        <div class="progress-fill" style="width: 82%;"></div>
+                    </div>
+                </div>
+
+                <div class="goal-values">
+                    <div class="val-row"><span>Valor Atual</span> <strong>R$ 4.100,00</strong></div>
+                    <div class="val-row"><span>Valor Alvo</span> <strong>R$ 5.000,00</strong></div>
+                    <div class="val-row highlight"><span>Faltam</span> <strong>R$ 900,00</strong></div>
+                </div>
+
+                <div class="goal-footer">
+                    <span><i class="ph ph-calendar"></i> 127 dias restantes</span>
+                    <button class="btn-small">Atualizar</button>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="goal-summary-section">
+            <h3>Resumo das Metas</h3>
+            <div class="summary-flex">
+                <div class="sum-item">
+                    <span>Total em Metas</span>
+                    <h4>R$ 33.000,00</h4>
+                </div>
+                <div class="sum-item">
+                    <span>Valor Acumulado</span>
+                    <h4>R$ 19.800,00</h4>
+                </div>
+                <div class="sum-card-dark">
+                    <span>Progresso Geral</span>
+                    <h3>60.0%</h3>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>]
